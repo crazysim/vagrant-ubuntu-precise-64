@@ -14,6 +14,16 @@ This should do everything you need. If you don't have
 mkisofs, install [homebrew](http://mxcl.github.com/homebrew/), then:
 
     brew install cdrtools
+    
+or, if you are on mountain lion
+
+    brew install dvdrtools
+
+
+### Jan's notes
+
+ - Upgraded the script to download ubuntu-12.04.1-alternate-amd64
+ - added a note about installing mkisofs on mountain lion.
 
 ### Ben's notes
 
