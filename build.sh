@@ -205,6 +205,9 @@ if ! VBoxManage showvminfo "${BOX}" >/dev/null 2>/dev/null; then
   # Zero out free space
   ssh -i "${FOLDER_BUILD}/id_rsa" -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 2222 vagrant@127.0.0.1 "sudo dd if=/dev/zero of=/EMPTY bs=1M; sudo rm /EMPTY"
 
+  # Shutdown
+  ssh -i "${FOLDER_BUILD}/id_rsa" -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 2222 vagrant@127.0.0.1 "sudo shutdown -h now"
+
   echo -n "Waiting for machine to shut off "
   while VBoxManage list runningvms | grep "${BOX}" >/dev/null; do
     sleep 20
