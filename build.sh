@@ -196,11 +196,7 @@ if ! VBoxManage showvminfo "${BOX}" >/dev/null 2>/dev/null; then
   curl --output "${FOLDER_BUILD}/id_rsa" "https://raw.github.com/mitchellh/vagrant/master/keys/vagrant"
   chmod 600 "${FOLDER_BUILD}/id_rsa"
 
-
-
   # install virtualbox guest additions
-  ssh -i "${FOLDER_BUILD}/id_rsa" -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 2222 vagrant@127.0.0.1 'sudo apt-get install -y linux-headers-`uname -r`'
-
   ssh -i "${FOLDER_BUILD}/id_rsa" -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 2222 vagrant@127.0.0.1 "sudo mount /dev/cdrom /media/cdrom; sudo sh /media/cdrom/VBoxLinuxAdditions.run; sudo umount /media/cdrom"
 
   # Clear Apt Cache
