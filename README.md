@@ -21,6 +21,9 @@ or, if you are on OS X Mountain Lion.
 
 ### Nelson's notes
 
+I would not use this. Please use the opscode bento boxes. Otehrwise, continue
+using this if you like having a rubygems 1.8.7 based install of chef-client.
+
  - Used somebody's USA locale stuff
  - [Add commands to delete apt-cache and zero out space.](http://stackoverflow.com/questions/11325479/how-to-control-the-version-of-chef-that-vagrant-uses-to-provision-vms)
 
